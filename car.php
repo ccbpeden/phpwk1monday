@@ -9,8 +9,14 @@ class Car
     {
         return $this->price < ($max_price + 100)
     }
-}
 
+    function __construct($make_model, $price, $miles)
+    {
+        $this->make_model = $make_model;
+        $this->price = $price;
+        $this->miles = $miles;
+    }
+}
 
 $porsche = new Car();
 $porsche->make_model = "2014 Porsche 911";
