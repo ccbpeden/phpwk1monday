@@ -52,10 +52,10 @@ class Car
     }
 }
 
-$porsche = new Car("2014 Porsch 911", 114991, 14241);
-$ford = new Car("2011 Ford F450", 55995, 14241);
-$lexus = new Car("2103 Lexus RX 350", 44700, 20000);
-$mercedes = new Car("Mercedes Benz CLS550", 39900, 37979);
+$porsche = new Car("2014 Porsch 911", 114991, 14241, "img/car1.jpg");
+$ford = new Car("2011 Ford F450", 55995, 14241, "img/car2.jpg");
+$lexus = new Car("2103 Lexus RX 350", 44700, 20000, "img/car3.jpg");
+$mercedes = new Car("Mercedes Benz CLS550", 39900, 37979, "img/car4.jpg");
 
 $cars = array($porsche, $ford, $lexus, $mercedes);
 
@@ -79,9 +79,8 @@ foreach ($cars as $car) {
             foreach ($cars_matching_search as $car) {
               $car_make_model = $car->getMake_model();
               $car_price = $car->getPrice();
-              $car_miles = $car->getPrice();
-              $car_img = $car->getCarImgPath();
-                echo "<img src='$car->car_img_path'>"
+              $car_miles = $car->getMiles();
+                echo "<img src='$car->car_img_path'>";
                 echo "<li> $car_make_model </li>";
                 echo "<ul>";
                     echo "<li> $$car_price </li>";
