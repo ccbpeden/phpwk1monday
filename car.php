@@ -76,16 +76,20 @@ foreach ($cars as $car) {
     <h1>Your Car Dealership</h1>
     <ul>
         <?php
-            foreach ($cars_matching_search as $car) {
-              $car_make_model = $car->getMake_model();
-              $car_price = $car->getPrice();
-              $car_miles = $car->getMiles();
-                echo "<img src='$car->car_img_path'>";
-                echo "<li> $car_make_model </li>";
-                echo "<ul>";
-                    echo "<li> $$car_price </li>";
-                    echo "<li> Miles: $car_miles </li>";
-                echo "</ul>";
+            if (empty($cars_matching_search)){
+              echo "No cars match your requirements, you chintzy bastadge!";
+            } else {
+                foreach ($cars_matching_search as $car) {
+                  $car_make_model = $car->getMake_model();
+                  $car_price = $car->getPrice();
+                  $car_miles = $car->getMiles();
+                    echo "<img src='$car->car_img_path'>";
+                    echo "<li> $car_make_model </li>";
+                    echo "<ul>";
+                        echo "<li> $$car_price </li>";
+                        echo "<li> Miles: $car_miles </li>";
+                    echo "</ul>";
+                }
             }
         ?>
     </ul>
