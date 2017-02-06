@@ -4,12 +4,14 @@ class Car
     private $make_model;
     private $price;
     private $miles;
+    private $car_img;
 
-    function __construct($make_model, $price, $miles)
+    function __construct($make_model, $price, $miles, $car_img_path)
     {
-      $this->make_model = $make_model;
-      $this->price = $price;
-      $this->miles = $miles;
+        $this->make_model = $make_model;
+        $this->price = $price;
+        $this->miles = $miles;
+        $this->car_img_path = $car_img_path;
     }
 
     function worthBuying($max_price)
