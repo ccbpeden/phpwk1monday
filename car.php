@@ -42,6 +42,11 @@ class Car
     {
         return $this->miles;
     }
+
+    function getCarImgPath()
+    {
+        return $this->car_img_path;
+    }
 }
 
 $porsche = new Car("2014 Porsch 911", 114991, 14241);
@@ -69,10 +74,15 @@ foreach ($cars as $car) {
     <ul>
         <?php
             foreach ($cars_matching_search as $car) {
-                echo "<li> $car->make_model </li>";
+              $car_make_model = $car->getMake_model();
+              $car_price = $car->getPrice();
+              $car_miles = $car->getPrice();
+              $car_img = $car->getCarImgPath();
+                echo "<img src='$car->car_img_path'>"
+                echo "<li> $car_make_model </li>";
                 echo "<ul>";
-                    echo "<li> $$car->price </li>";
-                    echo "<li> Miles: $car->miles </li>";
+                    echo "<li> $$car_price </li>";
+                    echo "<li> Miles: $car_miles </li>";
                 echo "</ul>";
             }
         ?>
