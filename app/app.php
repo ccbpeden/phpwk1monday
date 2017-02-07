@@ -35,10 +35,10 @@
 
     $app->get("/car_match", function() {
 
-        $porsche = new Car('2014 Porsch 911', 114991, 14241, 'img/car1.jpg');
-        $ford = new Car('2011 Ford F450', 55995, 14241, 'img/car2.jpg');
-        $lexus = new Car('2103 Lexus RX 350', 44700, 20000, 'img/car3.jpg');
-        $mercedes = new Car('Mercedes Benz CLS550', 39900, 37979, 'img/car4.jpg');
+        $porsche = new Car('2014 Porsch 911', 114991, 14241, '/../img/car1.jpg');
+        $ford = new Car('2011 Ford F450', 55995, 14241, '/../img/car2.jpg');
+        $lexus = new Car('2103 Lexus RX 350', 44700, 20000, '/../img/car3.jpg');
+        $mercedes = new Car('Mercedes Benz CLS550', 39900, 37979, '/../img/car4.jpg');
 
         $cars = array($porsche, $ford, $lexus, $mercedes);
 
@@ -56,7 +56,7 @@
             $car_make_model = $car->getMake_model();
             $car_price = $car->getPrice();
             $car_miles = $car->getMiles();
-            return "<img src='$car->car_img_path'>
+            return "<img src=$car->car_img_path>
              <li> $car_make_model </li>
              <ul>
                  <li> $$car_price </li>
