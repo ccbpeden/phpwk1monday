@@ -1,0 +1,13 @@
+{% if returnCars is empty %}
+  <p>'No cars match your requirements, you chintzy bastadge!'</p>
+{% endif %}
+
+{% if returnCars is not empty %}
+{% for Car in returnCars %}
+  <ul>
+    <li>{{Car.car_img_path}}</li>
+    <li>{{Car.getMake_model}}</li>
+    <li>{{Car.getPrice}}</li>
+    <li>{{Car.getMiles}}</li>
+  </ul>
+{% endif %}

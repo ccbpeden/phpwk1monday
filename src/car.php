@@ -52,4 +52,11 @@ class Car
     }
 }
 
+$porsche = new Car('2014 Porsch 911', 114991, 14241, '/../img/car1.jpg');
+$ford = new Car('2011 Ford F450', 55995, 14241, '/../img/car2.jpg');
+$lexus = new Car('2103 Lexus RX 350', 44700, 20000, '/../img/car3.jpg');
+$mercedes = new Car('Mercedes Benz CLS550', 39900, 37979, '/../img/car4.jpg');
+
+
+
 ?>
