@@ -1,4 +1,4 @@
-# _PHP Week 1 Lessions_
+# _PHP Week 1 Lessons_
 
 #### _Practice With PHP & Silex working through lessons_
 
